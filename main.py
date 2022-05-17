@@ -1,16 +1,29 @@
-from customerTests import *
+from customerListTests import *
 
 def main():
+
     testConstructor()
     print()
-    #testGetters()
-    testPropertyGetters()
-    #testSetters()
-    testPropertySetters()
+    testAppend()
     print()
-    testPropertySettersWithValidation()
-    # print()
-    testEncapsulation()
+    testPop()
+    print()
+    testFind()
+    print()
+    testRemove()
+    print()
+    testClear()
+    print()
+    testGetItem()
+    print()
+    testSetItem()
+    print()
+    testIn()
+    print()
+    testForLoop()
+    print()
+    testAdd()
+    print()
 
 
 # Press the green button in the gutter to run the script.
