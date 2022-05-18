@@ -67,5 +67,13 @@ class Product:
         return f'Product(id: {self.__id}, code: {self.__code}, description: {self.__description}, ' \
                f'unit price: {self.__unitPrice}, quantity: {self.__quantity})'
 
-
+    def __eq__(self, other):
+        """ This "magic method" is called when you check the equality of 2 products.  I had to add this to the product class
+        in order for find and __contains__ to work"""
+        if isinstance(other, Product):
+            return (self.id == other.id and self.code == other.code and
+                    self.description == other.description and self.unitPrice == other.unitPrice and
+                    self.quantity == other.quantity)
+        else:
+            return False
 

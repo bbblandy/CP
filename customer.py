@@ -43,3 +43,13 @@ class Customer:
 
     def __str__(self):
         return f'Customer(email: {self.__email}, FIRST: {self.__firstName}, LAST: {self.__lastName})'
+
+
+    def __eq__(self, other):
+        """ This "magic method" is called when you check the equality of 2 products.  I had to add this to the product class
+        in order for find and __contains__ to work"""
+        if isinstance(other, Customer):
+            return (self.email == other.email and self.firstName == other.firstName and
+                    self.lastName == other.lastName)
+        else:
+            return False
